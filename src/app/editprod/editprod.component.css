@@ -1,0 +1,33 @@
+.black-button {
+    background-color: black;
+    color: white;
+  }
+  .edit-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .alert-danger {
+    color: red;
+  }
+  
+  .form-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .black-button {
+    background-color: black;
+    color: white;
+  }
+  

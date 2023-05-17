@@ -1,0 +1,41 @@
+
+<form [formGroup]='myForm' (ngSubmit)="onSubmit()" enctype="multipart/form-data" class="edit-form" style="padding: 3%;margin-top: 10%; box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 0px 20px;">
+    <div class="form-group" >
+      <input type="hidden" class="form-control" id="id" formControlName="id" value='{{ repos._id }}' >
+      <label for="product_name">New Name</label>
+
+      <input type="text" class="form-control" id="product_name" formControlName="product_name" placeholder= '{{ repos.product_name }}'  >
+      <div *ngIf="myForm.controls['product_name'].invalid && (myForm.controls['product_name'].dirty || myForm.controls['product_name'].touched)" class="alert alert-danger">
+        <!-- <div *ngIf="myForm.controls['name'].errors.required"> -->
+          product_name is required.
+        <!-- </div> -->
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="image">New Image</label>
+      <!-- <input type="text" class="form-control" id="image" formControlName="image">
+       -->
+       <input type="file" class="form-control" id="image"  formControlName="image" (change)="onFileSelected($event)">
+      <div *ngIf="myForm.controls['image'].invalid && (myForm.controls['image'].dirty || myForm.controls['image'].touched)" class="alert alert-danger">
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="price">New Price</label>
+      <input type="number" class="form-control" id="price" formControlName="price" placeholder= '{{ repos.price }}'>
+      <div *ngIf="myForm.controls['price'].invalid && (myForm.controls['price'].dirty || myForm.controls['price'].touched)" class="alert alert-danger">
+        Price is required.
+      </div>
+    </div>
+    
+    <div class="form-actions">
+    <button type="submit" class="btn btn-primary" [disabled]="myForm.invalid">Submit</button>
+     <a href="/index">Cancel</a>
+
+  </div>
+
+  </form>
+  <!-- <a href="/index"><button class="btn btn-primary black-button"></button>Cancel</button></a> -->
+  
+  
+

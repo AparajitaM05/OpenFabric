@@ -1,0 +1,46 @@
+
+
+<div class="product-details" style="margin: 20px 30%; box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+	<h2>{{ repos.product_name }}</h2>
+    <hr>
+	<div class="product-info">
+	  <div class="product-image">
+		<!-- <img src='../assets/images/{{ repos.image }}' alt="{{ repos.product_name  }}" /> -->
+		<img src='../../../server/uploads/{{ repos.image }}' height="50" class="card-img" alt="image">
+
+	  </div>
+	  <div class="product-description">
+		<p class="price">Price: ${{repos.price}}</p>
+		<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum, libero ac malesuada finibus, velit diam finibus elit, id aliquam massa mi ut tellus.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum, libero ac malesuada finibus, velit diam finibus elit, id aliquam massa mi ut tellus.
+		</p>
+	  </div>
+	  
+	</div>
+	<div class="ratings">
+        <p class="average-rating">4.5</p>
+        
+      </div>
+
+	  <div class="reviews">
+		<h3>Reviews</h3>
+		<div class="review">
+		  <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		  <p class="review-rating">Rating: 4.5</p>
+		  <p class="review-author">By: John Doe</p>
+		</div>
+		<div class="review">
+		  <p class="review-text">Nulla gravida dolor a nunc auctor, vel tempor dolor feugiat.</p>
+		  <p class="review-rating">Rating: 3.8</p>
+		  <p class="review-author">By: Jane Smith</p>
+		</div>
+		<div class="review">
+		  <p class="review-text">Vestibulum in nisl faucibus, accumsan dolor in, ultrices mauris.</p>
+		  <p class="review-rating">Rating: 4.2</p>
+		  <p class="review-author">By: Robert Johnson</p>
+		</div>
+	  </div>
+	  <a href="/index"><button class="btn btn-primary black-button">Go Back</button></a>
+	  
+  </div>
+  

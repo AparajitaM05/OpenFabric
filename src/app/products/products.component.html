@@ -1,0 +1,72 @@
+<section>
+	<div class="container">
+
+		<!-- Title -->
+		<div class="row mb-4">
+			<div class="col-12 text-center">
+				<h2 class="mb-0">Product List</h2>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <button type="button" class="btn btn-success" routerLink="/addproduct">Add Product</button>
+			  <!-- <router-outlet></router-outlet> -->
+                  </div>
+	<button class="btn btn-primary btn-rounded" (click)="jwtCheck('valid')" >JWT CHECK</button>
+
+			</div>
+		</div>
+	
+	
+
+
+			<!-- Hotel item -->	 
+			 <div class="align-content-between flex-wrap mb-10" *ngFor="let products of repos; let i = index" >
+
+			<div class="col-sm-1 col-xl-4 flex-row justify-content-between" style="margin: 20px 80px; box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+				<!-- Card START -->
+				<div class="justify-content-between">
+				<button class="btn btn-danger btn-rounded m-1" (click)="deleteProduct(products._id)">Delete</button>
+				<button class="btn btn-dark btn-rounded m-3" (click)="editProduct(products._id)">Edit</button>
+				</div>
+				<hr>
+				<div class="card card-img-scale overflow-hidden bg-transparent">
+					<!-- Image  -->
+
+					<div class="card-img-scale-wrapper rounded-3">
+						
+						<img src='../../../server/uploads/{{ products.image }}' height="50" class="card-img" alt="image">
+						
+					</div>
+
+					<!-- Card body -->
+					<div class="card-body px-2">
+						<a href='productdetail/{{ products._id }}' >
+						
+						<h5 class="card-title" class="stretched-link">{{ products.product_name }}</h5>
+						<!-- Price  -->
+						<div class="d-flex justify-content-between align-items-center">
+							<h6 class="text-success mb-0"> ${{ products.price }}<small class="fw-light">/starting at</small> </h6>
+							<h6 class="mb-0">4.5<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+						</div>
+					</a>
+					</div>
+				
+                    <div class="d-flex justify-content-between flex-row">
+						<!-- <button type="button" class="btn btn-dark btn-rounded" routerLink="/Edit">Edit</button> -->
+
+
+						
+
+                    </div>
+                    
+				</div>
+				<!-- Card END -->
+			</div>
+
+			</div>
+			</div>
+		<!-- </div> -->
+		<!-- <button class="btn btn-danger btn-rounded"  (click)="deleteProduct( 3 )">Delete</button> -->
+		<!-- <button class="btn btn-danger btn-rounded" ng-click="deleteProduct(products._id)">Delete</button> -->
+
+		<!-- <button class="btn btn-danger btn-rounded" (click)="deleteProduct("h")"  > Delete</button> -->
+</section>
+
